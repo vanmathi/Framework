@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="DailySuite">
+<test name="DailyTests">
+    <classes>
+        <class name="Testrunner.githubApp"/>
+        <class name="Testrunner.chatgptApp"/>
+    </classes>
+</test>
+</suite>
