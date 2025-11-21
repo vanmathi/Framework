@@ -2,7 +2,7 @@ name: Daily Tests Run
 
 on:
   schedule:
-    - cron: "0 8 * * *"   # 1:30 PM IST
+    - cron: "0 8 * * *"
   workflow_dispatch:
 
 jobs:
@@ -22,7 +22,19 @@ jobs:
       - name: Install latest Google Chrome
         uses: browser-actions/setup-chrome@v1
 
-      - name: Run Tests
+      - name: Install Chrome dependencies
         run: |
-          echo "Running tests..."
-          mvn clean test -Dsurefire.suiteXmlFiles=daily-suite.xml
+          sudo apt-get update
+          sudo apt-get install -y \
+            libnss3 \
+            libatk1.0-0 \
+            libatk-bridge2.0-0 \
+            libcups2 \
+            libxkbcommon0 \
+            libxcomposite1 \
+            libxrandr2 \
+            libgbm1 \
+            libasound2
+
+      - name: Run Tests
+        run: mvn clean test -Dsurefire.suiteXmlFiles=daily-suite.xml
