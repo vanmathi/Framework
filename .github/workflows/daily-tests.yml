@@ -22,4 +22,4 @@ jobs:
       - name: Run Tests
         run: |
           echo "Running tests..."
-          mvn clean test -DsuiteXmlFile=daily-suite.xml
+          mvn clean test -Dsurefire.suiteXmlFiles=daily-suite.xml
