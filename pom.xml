@@ -6,4 +6,22 @@
   <version>1.0-SNAPSHOT</version>
   <name>Archetype - SampleProject</name>
   <url>http://maven.apache.org</url>
+
+  <dependencies>
+  <dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>7.10.2</version>
+  </dependency>
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-java</artifactId>
+      <version>4.11.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jline</groupId>
+      <artifactId>jline</artifactId>
+      <version>3.23.0</version>
+    </dependency>
+  </dependencies>
 </project>
