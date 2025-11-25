@@ -21,6 +21,7 @@ public class chatgptApp extends basemethods {
     @Test(priority=2)
     public void openApp(){
          startApp("https://chatgpt.com/");
+         System.out.println("url opened");
     }
     @AfterMethod
     public void tearDown() {
